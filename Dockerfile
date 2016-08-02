@@ -4,7 +4,7 @@ MAINTAINER Etienne Thevenot (etienne.thevenot@cea.fr)
 
 # Update system, install requirements, clone package, copy files, delete git and cleanup.
 RUN apt-get update && apt-get install -y --no-install-recommends r-base git && \
-    git clone -b docker https://github.com/phnmnl/univariate /files/univariate-clone && \
+    git clone -b docker https://github.com/workflow4metabolomics/univariate /files/univariate-clone && \
     mkdir -p /files/univariate && cp /files/univariate-clone/*.R /files/univariate && \
     rm -rf /files/univariate-clone && \
     echo 'options("repos"="http://cran.rstudio.com")' >> /etc/R/Rprofile.site && \
