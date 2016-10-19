@@ -73,7 +73,7 @@ correction for multiple testing.
 ## Tool Authors
 
 - Marie Tremblay-Franco (INRA, MetaToul, MetaboHUB).
-- Étienne Thévenot (CEA, LIST, MetaboHUB).
+- [Étienne Thévenot](http://etiennethevenot.pagesperso-orange.fr) (CEA, LIST, MetaboHUB).
 
 ## Container Contributors
 
