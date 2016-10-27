@@ -58,11 +58,14 @@ correction for multiple testing.
 - Statistics
 - Correction for multiple testing
 
-## Metabolomics Technologies
+## Functionality
 
-- LC-MS
-- GC-MS
-- NMR
+- Statistical Analysis
+
+## Approaches
+
+- Metabolomics / Targeted
+- Metabolomics / Untargeted
 
 ## Data Analysis
 
