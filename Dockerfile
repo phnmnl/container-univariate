@@ -16,5 +16,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends r-base git && \
 RUN cp /files/univariate/*.R /usr/local/bin/
 RUN chmod a+rx /usr/local/bin/univariate_wrapper.R
 
+# Create folders for container testing
+RUN mkdir /test-in
+RUN mkdir /test-out
+
 # Define Entry point script
 ENTRYPOINT ["/files/univariate/univariate_wrapper.R"]

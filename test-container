@@ -1,0 +1,16 @@
+#!/bin/bash
+
+progdir=$(dirname $0)
+progabsdir=$PWD/$progdir
+
+container=$1
+if [ -z "$container" ] ; then
+	container=univariate
+fi
+
+mkdir -p $progabsdir/output
+docker run -v $progabsdir/test-data:/test-in:ro -v $progabsdir/output:/test-out:rw -ti $container dataMatrix_in /test-in/dataMatrix.tsv sampleMetadata_in /test-in/sampleMetadata.tsv variableMetadata_in /test-in/variableMetadata.tsv facC qual tesC kruskal adjC fdr thrN 0.05 variableMetadata_out /test-out/variableMetadata.tsv figure /test-out/figure.png information /test-out/information.txt
+if ! diff -q $progabsdir/output/variableMetadata.tsv test-data/output-variableMetadata.tsv >/dev/null ; then
+	echo "Test of container $container failed !" >&2
+	exit 1
+fi
