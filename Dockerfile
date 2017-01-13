@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Etienne Thevenot (etienne.thevenot@cea.fr)
 
-ENV TOOL_VERSION=2.1.4
+ENV TOOL_VERSION=2.2.2
 ENV CONTAINER_VERSION=1.1
 
 LABEL version="${CONTAINER_VERSION}"
@@ -10,7 +10,7 @@ LABEL tool_version="${TOOL_VERSION}"
 
 # Update system, install requirements, clone package, copy files, delete git and cleanup.
 RUN apt-get update && apt-get install -y --no-install-recommends r-base git && \
-    git clone -b v2.1.4 https://github.com/workflow4metabolomics/univariate /files/univariate-clone && \
+    git clone -b v${TOOL_VERSION} https://github.com/workflow4metabolomics/univariate /files/univariate-clone && \
     mkdir -p /files/univariate && cp /files/univariate-clone/*.R /files/univariate && \
     rm -rf /files/univariate-clone && \
     echo 'options("repos"="http://cran.rstudio.com")' >> /etc/R/Rprofile.site && \
