@@ -3,7 +3,7 @@
 ![Logo](w4m.png)
 
 # W4M Univariate
-Version: 2.2.3
+Version: 2.2.6
 
 ## Short description
 

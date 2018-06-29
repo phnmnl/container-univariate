@@ -4,7 +4,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Etienne Thevenot (etienne.thevenot@cea.fr)
 
-ENV TOOL_VERSION=2.2.3
+ENV TOOL_VERSION=2.2.6
 ENV CONTAINER_VERSION=1.3
 
 LABEL version="${CONTAINER_VERSION}"
